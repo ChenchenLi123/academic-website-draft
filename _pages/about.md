@@ -26,6 +26,12 @@ Work Experience
 - **University of Tennessee, Knoxville** (August 2022 - July 2026), Graduate Research Assistant
 - **University of Tennessee, Knoxville** (August 2022 - May 2024), Graduate Teaching Assistant
 
+Teaching
+======
+
+- ECE 496 (Spring 2026)
+- ECE 620 (Fall 2026)
+
 Education
 ======
 - **University of Tennessee, Knoxville** (August 2022 - July 2026), PhD student
@@ -36,14 +42,3 @@ Awards
 ======
 - **EECS Outstanding Graduate Research Assistant Award**, 2026
 - **Min Kao Fellowship**, 2025 - 2026
-
-Getting started
-======
-
-Email: [cli66@vols.utk.edu](mailto:cli66@vols.utk.edu)
-
-Teaching
-======
-
-- ECE 496 (Spring 2026)
-- ECE 620 (Fall 2026)
