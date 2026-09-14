@@ -5,32 +5,15 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<p>For the full publication list, please visit <a href="https://scholar.google.com/citations?view_op=list_works&amp;hl=en&amp;user=Iv8KofcAAAAJ">Google Scholar Profile</a>.</p>
 
-{% include base_path %}
+<h2>Selected Publications</h2>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+<ol>
+  <li><strong>Chenchen Li</strong>, Fangxing (Fran) Li*, Sufan Jiang, Jin Zhao, Shiyuan Fan, Leon M. Tolbert, “Resilience-Oriented DG Siting and Sizing Considering Energy Vulnerability Constraint,” <em>IEEE Transactions on Smart Grid</em>, 2026.</li>
+  <li><strong>Chenchen Li</strong>, Fangxing (Fran) Li*, Sufan Jiang, Jinning Wang, “Translating energy equity from a sociological concept to an electric power engineering perspective,” <em>Nature Reviews Electrical Engineering</em>, 2025.</li>
+  <li><strong>Chenchen Li</strong>, Fangxing (Fran) Li*, Sufan Jiang, Xiaofei Wang, Jinning Wang, “Siting and Sizing of DG Units Considering Energy Equity: Model, Solution, and Guidelines,” <em>IEEE Transactions on Smart Grid</em>, 2024.</li>
+  <li><strong>Chenchen Li</strong>, Nian Liu*, Liudong Chen, Yubing. Chen, João P. S. Catalão, “Structural Decomposition Approach for Distribution Network Reconfiguration,” <em>IEEE Transactions on Industrial Informatics</em>, 2025.</li>
+  <li><strong>Chenchen Li</strong>, Yanna Xi, Yufan Lu, Nian Liu*, Liudong Chen, Li Ju, Yibin Tao, “Resilient Outage Recovery of a Distribution System: Co-Optimizing Mobile Power Sources with Network Structure,” <em>Protection and Control of Modern Power Systems</em>, 2022.</li>
+  <li>Nian Liu, <strong>Chenchen Li</strong>, Liudong Chen, Jianhui Wang*, “Hybrid Data-Driven and Model-Based Distribution Network Reconfiguration With Lossless Model Reduction,” <em>IEEE Transactions on Industrial Informatics</em>, 2022.</li>
+</ol>
