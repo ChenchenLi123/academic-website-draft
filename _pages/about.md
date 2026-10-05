@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Chenchen Li is a Postdoctoral Research Associate in the Min H. Kao Department of Electrical Engineering and Computer Science at the University of Tennessee, Knoxville. She earned her Ph.D. in Electrical Engineering from the University of Tennessee, Knoxville, advised by Prof. Fangxing Li.
+Chenchen Li is a Postdoctoral Research Associate in the Min H. Kao Department of Electrical Engineering and Computer Science at the University of Tennessee, Knoxville. She earned her Ph.D. in Electrical Engineering from the University of Tennessee, Knoxville, advised by Prof. Fangxing (Fran) Li.
 
 Research Interests
 ======
@@ -34,9 +34,9 @@ Teaching
 ======
 
 - **Course Instructor** | University of Tennessee, Knoxville<br>
-  Courses: ECE 620, ECE 496
+  ECE 620, ECE 496
 - **Graduate Teaching Assistant** | University of Tennessee, Knoxville<br>
-  Courses: ECE 202, ECE 201, ECE 301
+  ECE 202, ECE 201, ECE 301
 
 Education
 ======

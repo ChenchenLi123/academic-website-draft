@@ -5,7 +5,7 @@ permalink: /research/
 author_profile: true
 ---
 
-My research focuses on the planning, operation, and resilience of modern electric power systems.
+My research develops models and methods for power system planning, market operation, and resilience. Specifically, my research directions include:
 
 ## Foundation models for power systems
 
