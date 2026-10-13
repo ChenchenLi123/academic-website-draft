@@ -9,11 +9,81 @@ author_profile: true
 
 <h2>Selected Publications</h2>
 
-<ol>
-  <li><strong>Chenchen Li</strong>, Fangxing (Fran) Li*, Sufan Jiang, Jin Zhao, Shiyuan Fan, Leon M. Tolbert, “Resilience-Oriented DG Siting and Sizing Considering Energy Vulnerability Constraint,” <em>IEEE Transactions on Smart Grid</em>, 2026.</li>
-  <li><strong>Chenchen Li</strong>, Fangxing (Fran) Li*, Sufan Jiang, Jinning Wang, “Translating energy equity from a sociological concept to an electric power engineering perspective,” <em>Nature Reviews Electrical Engineering</em>, 2025.</li>
-  <li><strong>Chenchen Li</strong>, Fangxing (Fran) Li*, Sufan Jiang, Xiaofei Wang, Jinning Wang, “Siting and Sizing of DG Units Considering Energy Equity: Model, Solution, and Guidelines,” <em>IEEE Transactions on Smart Grid</em>, 2024.</li>
-  <li><strong>Chenchen Li</strong>, Nian Liu*, Liudong Chen, Yubing. Chen, João P. S. Catalão, “Structural Decomposition Approach for Distribution Network Reconfiguration,” <em>IEEE Transactions on Industrial Informatics</em>, 2025.</li>
-  <li><strong>Chenchen Li</strong>, Yanna Xi, Yufan Lu, Nian Liu*, Liudong Chen, Li Ju, Yibin Tao, “Resilient Outage Recovery of a Distribution System: Co-Optimizing Mobile Power Sources with Network Structure,” <em>Protection and Control of Modern Power Systems</em>, 2022.</li>
-  <li>Nian Liu, <strong>Chenchen Li</strong>, Liudong Chen, Jianhui Wang*, “Hybrid Data-Driven and Model-Based Distribution Network Reconfiguration With Lossless Model Reduction,” <em>IEEE Transactions on Industrial Informatics</em>, 2022.</li>
+<style>
+  .selected-publications .author-toggle {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--global-link-color);
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .selected-publications .author-toggle:hover {
+    color: var(--global-link-color-hover);
+  }
+</style>
+
+<ol class="selected-publications">
+  <li>
+    <span class="publication-authors"><strong>Chenchen Li</strong>, Fangxing (Fran) Li*, Sufan Jiang, Jin Zhao, Shiyuan Fan, Leon M. Tolbert</span>, “Resilience-Oriented DG Siting and Sizing Considering Energy Vulnerability Constraint,” <em>IEEE Transactions on Smart Grid</em>, 2026.
+  </li>
+  <li>
+    <span class="publication-authors"><strong>Chenchen Li</strong>, Fangxing (Fran) Li*, Sufan Jiang, Jinning Wang</span>, “Translating energy equity from a sociological concept to an electric power engineering perspective,” <em>Nature Reviews Electrical Engineering</em>, 2025.
+  </li>
+  <li>
+    <span class="publication-authors"><strong>Chenchen Li</strong>, Fangxing (Fran) Li*, Sufan Jiang, Xiaofei Wang, Jinning Wang</span>, “Siting and Sizing of DG Units Considering Energy Equity: Model, Solution, and Guidelines,” <em>IEEE Transactions on Smart Grid</em>, 2024.
+  </li>
+  <li>
+    <span class="publication-authors"><strong>Chenchen Li</strong>, Nian Liu*, Liudong Chen, Yubing. Chen, João P. S. Catalão</span>, “Structural Decomposition Approach for Distribution Network Reconfiguration,” <em>IEEE Transactions on Industrial Informatics</em>, 2025.
+  </li>
+  <li>
+    <span class="publication-authors"><strong>Chenchen Li</strong>, Yanna Xi, Yufan Lu, Nian Liu*, Liudong Chen, Li Ju, Yibin Tao</span>, “Resilient Outage Recovery of a Distribution System: Co-Optimizing Mobile Power Sources with Network Structure,” <em>Protection and Control of Modern Power Systems</em>, 2022.
+  </li>
+  <li>
+    <span class="publication-authors">Nian Liu, <strong>Chenchen Li</strong>, Liudong Chen, Jianhui Wang*</span>, “Hybrid Data-Driven and Model-Based Distribution Network Reconfiguration With Lossless Model Reduction,” <em>IEEE Transactions on Industrial Informatics</em>, 2022.
+  </li>
 </ol>
+
+<script>
+  document.querySelectorAll(".selected-publications .publication-authors").forEach((authorList, index) => {
+    /* Author names are comma-separated; retain their existing markup. */
+    const authors = authorList.innerHTML.split(", ");
+    let visibleCount = Math.min(3, authors.length);
+
+    authors.forEach((author, authorIndex) => {
+      if (author.includes("*") || author.includes("Chenchen Li")) {
+        visibleCount = Math.max(visibleCount, authorIndex + 1);
+      }
+    });
+
+    if (visibleCount === authors.length) return;
+
+    const remaining = document.createElement("span");
+    remaining.id = `publication-authors-${index + 1}`;
+    remaining.innerHTML = ", " + authors.slice(visibleCount).join(", ");
+    remaining.hidden = true;
+
+    const ellipsis = document.createElement("span");
+    ellipsis.textContent = ", ...";
+    ellipsis.setAttribute("aria-hidden", "true");
+
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "author-toggle";
+    toggle.textContent = "Show all authors";
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-controls", remaining.id);
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") !== "true";
+      remaining.hidden = !expanded;
+      ellipsis.hidden = expanded;
+      toggle.setAttribute("aria-expanded", String(expanded));
+      toggle.textContent = expanded ? "Hide authors" : "Show all authors";
+    });
+
+    authorList.innerHTML = authors.slice(0, visibleCount).join(", ");
+    authorList.append(remaining, ellipsis, " ", toggle);
+  });
+</script>
