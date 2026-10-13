@@ -25,7 +25,7 @@ Work Experience
   Postdoctoral Research Associate
 - **National Laboratory of the Rockies** (June 2024 - August 2024)<br>
   Research Intern
-- **University of Tennessee, Knoxville** (August 2022 - July 2026)<br>
+- **University of Tennessee, Knoxville** (August 2022 - August 2026)<br>
   Graduate Research Assistant
 - **University of Tennessee, Knoxville** (August 2022 - May 2024)<br>
   Graduate Teaching Assistant
@@ -40,7 +40,7 @@ Teaching
 
 Education
 ======
-- **University of Tennessee, Knoxville** (August 2022 - July 2026)<br>
+- **University of Tennessee, Knoxville** (August 2022 - August 2026)<br>
   PhD student
 - **North China Electric Power University** (September 2019 - June 2022)<br>
   MS student
